@@ -1,6 +1,6 @@
 import "dotenv/config";
 import mongoose from "mongoose";
-import Story from "../models/Story.js";
+import story from "../models/story.js";
 import storyData from "../stories.json" assert { type: "json" };
 import User from "../models/User.js";
 import userData from "../users.json" assert { type: "json" };
@@ -50,7 +50,7 @@ async function seed() {
 
   // await Stories.remove({});
   // await Story.insertMany(storyData);
-  await Story.insertMany(data);
+  await story.insertMany(data);
   // await Users.remove({});
   await User.insertMany(userData);
 }
